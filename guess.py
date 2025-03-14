@@ -27,7 +27,7 @@ while len(answered_states) < TOTAL:
         for state in state_list:
             if state not in answered_states:
                 missed_states.append(state)
-        pd.DataFrame(missed_states).to_csv("missed states.csv")
+        pd.DataFrame(missed_states).to_csv("states_to_learn.csv")
         break
     if answer_state in state_list:
         location = data.loc[data["state"] == answer_state]
